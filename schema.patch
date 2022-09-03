@@ -1,0 +1,21 @@
+diff --git a/src/schema.rs b/src/schema.rs
+index 88aa579..0225851 100644
+--- a/src/schema.rs
++++ b/src/schema.rs
+@@ -1,13 +1,13 @@
+ // @generated automatically by Diesel CLI.
+ 
+ diesel::table! {
+     queue (id) {
+         id -> Text,
+-        created_at -> Text,
+-        updated_at -> Text,
+-        scheduled_for -> Text,
++        created_at -> TimestamptzSqlite,
++        updated_at -> TimestamptzSqlite,
++        scheduled_for -> TimestamptzSqlite,
+         failed_attempts -> Integer,
+         status -> Integer,
+         message -> Text,
+     }
+ }
